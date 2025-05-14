@@ -1,0 +1,201 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  background-color: #222;
+  color: #fff;
+  padding: 1.5rem 1rem;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu__toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.menu__links {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.menu__link {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu__link:hover {
+  color: #007bff;
+}
+
+.menu__links--active {
+  display: block;
+}
+
+/* Introdução */
+.intro__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro__img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.intro__text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Sobre */
+.sobre__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.sobre__text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Serviços */
+.services {
+  padding: 2rem 1rem;
+}
+
+.services__title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.service {
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.service:hover {
+  background-color: #d4d4d4;
+}
+
+/* Depoimentos */
+.testimonials__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.testimonials__quote {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* Contato */
+.contact__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact__info {
+  margin-bottom: 0.5rem;
+}
+
+.contact__form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact__input,
+.contact__textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer__text {
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu__links {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .menu__toggle {
+    display: block;
+  }
+
+  .menu__links--active {
+    display: flex;
+  }
+
+  .header__title {
+    text-align: center;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+}
